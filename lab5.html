@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>[pear] lab 5</title>
+    </head>
+    <body>
+        <header>
+            <h1>CMSC 126 - Lab 5 </h1>
+            <p>University of the Philippines Visayas | 2nd Semester AY 2025 - 2026</p>
+            <hr>
+        </header>
+
+        <!--current time and date-->
+        <h2> Current Date and Time</h2>
+        <button onclick="time_now()">Show Current Date</button>
+        <br><br>
+        <div id="time"></div>
+        <hr>
+
+        <!--add_student-->
+        <section>
+            <h2> Add Student</h2>
+            <form id="studentForm">
+                
+                <!--Name-->
+                <label>Name:</label>
+                <input type="text" id="name" placeholder="Narda Custodio">
+                <p class="error" id="nameError"></p>
+
+                <!--Age-->
+                <label>Age:</label>
+                <input type="number" id="age" placeholder="19+ only">
+                <p class="error" id="ageError"></p>
+
+                <!-- Email-->
+                 <label>Email:</label>
+                 <input type="text" id="email" placeholder="iamdarna@up.edu.ph">
+                 <p class="error" id="emailError"></p>
+
+                 <!--Course-->
+                 <label>Course:</label>
+                 <select id="course">
+                    <option value="">Select Course</option>
+                    <option>BA Food Appreciation</option>
+                    <option>BA Applied Poetry of the Future</option>
+                    <option>BS Computer Repair Shop</option>
+                    <option>BS Video Gaming</option>
+                    <option>BS Installing and Downloading</option>
+                 </select>
+
+                 <br><br>
+                 <!--Submit Button-->
+                 <button type="button" onclick="add_student()">Submit</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <!--Search-->
+        <section>
+            <h2>Search Student</h2>
+            <input type="text" placeholder="Enter Student ID">
+            <button onclick="find_student()"> 🔍︎search </button>
+
+            <div id="searchResult"></div>
+        </section>
+        
+        <hr>
+
+        <!--Display-->
+        <section>
+            <h2>All Students</h2>
+            <button onclick="display_list()">Display All</button>
+            <div id="allStudents"></div>
+        </section>
+
+        <hr>
+
+        <footer>
+            <p>&copy; 2026 PEAR &mdash; all rights reserved</p>
+        </footer>
+
+        <!--Link to JS-->
+        <script src="lab5_scripts.js"></script>
+    </body>
+
+    
+</html>
