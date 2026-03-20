@@ -14,13 +14,13 @@ function time_now(){
     
     let hours  = now.getHours();
     const mins = now.getMinutes().toString().padStart(2, "0");
-    const ampm = hours >= 12 ? "PM" : "AM";
+    const meridiems = hours >= 12 ? "PM" : "AM";
     hours = hours % 12 || 12;
     
     const output = document.getElementById("time");
     output.innerHTML =
     "<p>Today is <strong>" + month + " " + date + ", " + year + ", " + dayName + ".</strong></p>" +
-    "<p>The current time is <strong>" + hours + ":" + mins + " " + ampm + ".</strong></p>";
+    "<p>The current time is <strong>" + hours + ":" + mins + " " + meridiems + ".</strong></p>";
     output.classList.add("visible");
 }
 
