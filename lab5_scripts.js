@@ -53,8 +53,11 @@ function validate_form(name, age, email, course) {
     } else if (name.length <= 5) {
         document.getElementById("nameError").textContent = "Name must be more than 5 characters.";
         valid = false;
-    } else if (!/^[a-zA-Z]+\s[a-zA-Z\s\-.']+$/.test(name)) {
-        document.getElementById("nameError").textContent = "Name must contain at least one space (e.g. First Last).";
+    } else if (!/\s/.test(name)) {
+        document.getElementById("nameError").textContent = "Name must contain a space (e.g. First Last).";
+        valid = false;
+    } else if (!/^[a-zA-Z]+\s[a-zA-Z\s\-.']*[a-zA-Z]$/.test(name)) {
+        document.getElementById("nameError").textContent = "Name contains invalid characters.";
         valid = false;
     }
 
