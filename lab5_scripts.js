@@ -86,7 +86,7 @@ function validate_form(name, age, email, course) {
     return valid;
 }
 
-//----------------- add students -----------------------------//
+// add student function
 function add_student() {
     const name   = document.getElementById("name").value.trim();
     const age    = parseInt(document.getElementById("age").value);
