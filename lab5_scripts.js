@@ -25,7 +25,6 @@ function time_now(){
 }
 
 //----------------- add students -----------------------------//
-//TODO: validation, student obj creation, student id generator, push to array students
 
 // generate student id function
 function generate_student_number() {
