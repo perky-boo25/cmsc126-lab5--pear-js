@@ -25,7 +25,6 @@ function time_now(){
 }
 
 //----------------- add students -----------------------------//
-//TODO: validation, student obj creation, student id generator, push to array students
 
 // generate student id function
 function generate_student_number() {
@@ -86,7 +85,7 @@ function validate_form(name, age, email, course) {
     return valid;
 }
 
-//----------------- add students -----------------------------//
+// add student function
 function add_student() {
     const name   = document.getElementById("name").value.trim();
     const age    = parseInt(document.getElementById("age").value);
