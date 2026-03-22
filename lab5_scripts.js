@@ -124,6 +124,11 @@ function add_student() {
 //----------------- search students --------------------------//
 //TODO: Search Student by ID
 function find_student() {
+    const studentSearch = document.getElementById('SearchInput');
+    studentSearch.addEventListener('keyup', e => {
+        let currVal = e.target.value.toLowerCase();
+        console.log(currVal);
+    });
 
 }
 
