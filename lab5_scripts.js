@@ -124,12 +124,25 @@ function add_student() {
 //----------------- search students --------------------------//
 //TODO: Search Student by ID
 function find_student() {
-    const studentSearch = document.getElementById('SearchInput');
-    studentSearch.addEventListener('keyup', e => {
-        let currVal = e.target.value.toLowerCase();
-        console.log(currVal);
-    });
+    const input = document.getElementById('searchInput').value.trim();
+    const result = document.getElementById('searchResult');
 
+    // traverses array to search for matching student number
+    const found = students.find(s => s.studentNumber === input)
+
+    // display info if there's a match, otherwise print out does not exist
+    if (found) {
+        result.innerHTML  =     "<p>Student Number: " + found.studentNumber + "</p>" +
+                                "<p>Name: " + found.name + "</p>" +
+                                "<p>Age: " + found.age + "</p>" +
+                                "<p>Email: " + found.email + "</p>" +
+                                "<p>Course: " + found.course + "</p>"
+    } else {
+        result.textContent  =   "Student record does not exist"
+    }
+
+    // clear search bar
+    document.getElementById('searchInput').value   = "";
 }
 
 //----------------- display students -------------------------//
